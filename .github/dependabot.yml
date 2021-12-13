@@ -17,3 +17,16 @@ updates:
       - "joshjohanning"
     commit-message:
       prefix: "pip"
+
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "daily"
+    labels:
+      - "triage-required"
+    assignees:
+      - "joshjohanning"
+    reviewers:
+      - "joshjohanning"
+    commit-message:
+      prefix: "npm"
