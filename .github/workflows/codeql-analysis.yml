@@ -76,4 +76,4 @@ jobs:
     - uses: actions/upload-artifact@v2
       with:
         name: codeql-database
-        path: ./../codeql-database
+        path: /**/codeql_databases
