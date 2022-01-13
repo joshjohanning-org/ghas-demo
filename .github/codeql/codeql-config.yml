@@ -5,5 +5,4 @@ disable-default-queries: false
 queries:
   - name: go-custom-queries
     uses: advanced-security/ghas-bootcamp-march-2021-query/go/src@main
-  - uses: security
   # - uses: security-and-quality
