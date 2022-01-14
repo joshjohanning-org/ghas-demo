@@ -74,5 +74,5 @@ jobs:
     # for debugging
     - uses: actions/upload-artifact@v2
       with:
-        name: codeql-database
+        name: codeql-database-${{ matrix.language }}
         path: ${{ runner.temp }}/codeql_databases
