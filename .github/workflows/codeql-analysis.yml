@@ -23,7 +23,7 @@ on:
 jobs:
   analyze:
     name: Analyze
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       fail-fast: false
@@ -70,11 +70,9 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-      
-    # - run: ls -R ~/
     
+    # for debugging
     - uses: actions/upload-artifact@v2
       with:
         name: codeql-database
-        # path: ~/**/_temp/codeql_databases
         path: ${{ runner.temp }}/codeql_databases
