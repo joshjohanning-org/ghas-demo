@@ -77,4 +77,4 @@ jobs:
       with:
         name: codeql-database
         # path: ~/**/_temp/codeql_databases
-        path: ./../codeql_databases
+        path: ${RUNNER_TEMP}/codeql_databases
