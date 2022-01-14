@@ -70,10 +70,12 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
+      with: 
+        upload-database: true
       
-    - run: ls -R ~/
+    # - run: ls -R ~/
     
-    - uses: actions/upload-artifact@v2
-      with:
-        name: codeql-database
-        path: ~/**/_temp/codeql_databases
+    # - uses: actions/upload-artifact@v2
+    #   with:
+    #     name: codeql-database
+    #     path: ~/**/_temp/codeql_databases
