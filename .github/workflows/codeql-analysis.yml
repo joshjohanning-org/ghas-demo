@@ -73,7 +73,7 @@ jobs:
       uses: github/codeql-action/analyze@v1
     
     # for debugging
-    - uses: actions/upload-artifact@v2
-      with:
-        name: codeql-database-${{ matrix.language }}
-        path: ${{ runner.temp }}/codeql_databases
+    # - uses: actions/upload-artifact@v2
+    #   with:
+    #     name: codeql-database-${{ matrix.language }}
+    #    path: ${{ runner.temp }}/codeql_databases
