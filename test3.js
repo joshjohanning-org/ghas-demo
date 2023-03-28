@@ -1,6 +1,6 @@
 function endsWith(x,y) {
 
-    let newVar = "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";
+    let newVar = "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";
     let index = x.lastIndexOf(y);
     return x.lastIndexOf(y) === x.length - y.length;
   
