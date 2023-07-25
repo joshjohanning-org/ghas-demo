@@ -1,4 +1,4 @@
-<h1 align="center">GitHub Advanced Security Bootcamp March 2021</h1>
+<h1 align="center">GitHub Advanced Security Bootcamp</h1>
 <p align="center">
   <a href="#mega-prerequisites">Prerequisites</a> •  
   <a href="#books-resources">Resources</a>
@@ -35,5 +35,4 @@ https://docs.github.com/en/free-pro-team@latest/github/finding-security-vulnerab
 - [GraphQL API](https://docs.github.com/en/free-pro-team@latest/graphql)
   - [RepositoryVulnerabilityAlert](https://docs.github.com/en/free-pro-team@latest/graphql/reference/objects#repositoryvulnerabilityalert)
 - [REST API](https://docs.github.com/en/free-pro-team@latest/rest)
-
 
