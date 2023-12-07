@@ -18,6 +18,10 @@ Vue.use(VueRouter)
 
 Vue.prototype.$http = Axios
 
+const oldToken = jwt.sign({ sub: 'my-uid-name' }, 'secret', {
+    expiresIn: '1min',
+});
+
 const someUnusedProperty = new Vue({
   data: {
     myTestProperty: 2020
