@@ -20,7 +20,7 @@ Vue.prototype.$http = Axios
 
 const someUnusedProperty = new Vue({
   data: {
-    myTestProperty: 2020t
+    myTestProperty: 2020
   },
   created: () => {
     console.log('myTestProperty is: ' + this.myTestProperty);
