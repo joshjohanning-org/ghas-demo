@@ -20,7 +20,7 @@ Vue.prototype.$http = Axios
 
 const someUnusedProperty = new Vue({
   data: {
-    myTestProperty: 2020
+    myTestProperty: 2020t
   },
   created: () => {
     console.log('myTestProperty is: ' + this.myTestProperty);
@@ -47,6 +47,8 @@ const jwt = {
     const nowUTCInSecondsSincEpoch = nowLocalInSecondsSincEpoch + nowLocal.getTimezoneOffset() * 60
     console.log("UTC time since epoch:", nowUTCInSecondsSincEpoch)
     console.log("Expiration delta: ", nowUTCInSecondsSincEpoch - exp)
+    app.javaScriptKey = generateKey('javaScript');
+    
     return exp <= nowUTCInSecondsSincEpoch
   }
 }
