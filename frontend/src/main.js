@@ -47,11 +47,31 @@ const jwt = {
     const nowUTCInSecondsSincEpoch = nowLocalInSecondsSincEpoch + nowLocal.getTimezoneOffset() * 60
     console.log("UTC time since epoch:", nowUTCInSecondsSincEpoch)
     console.log("Expiration delta: ", nowUTCInSecondsSincEpoch - exp)
-    app.javaScriptKey = generateKey('javaScript');
     
     return exp <= nowUTCInSecondsSincEpoch
   }
 }
+
+  Application.observe('before save', function(ctx, next) {
+    if (!ctx.instance) {
+      // Partial update - don't generate new keys
+      // NOTE(bajtos) This also means that an atomic updateOrCreate
+      // will not generate keys when a new record is creatd
+      return next();
+    }
+
+    var app = ctx.instance;
+    app.created = app.modified = new Date();
+    if (!app.id) {
+      app.id = generateKey('id', 'md5');
+    }
+    app.clientKey = generateKey('client');
+    app.javaScriptKey = generateKey('javaScript');
+    app.restApiKey = generateKey('restApi');
+    app.windowsKey = generateKey('windows');
+    app.masterKey = generateKey('master');
+    next();
+  });
 
 const store = new Vuex.Store({
   state: {
