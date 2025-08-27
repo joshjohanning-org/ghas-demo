@@ -94,10 +94,8 @@ jobs:
           query-filters:
             - exclude:
                 id: java/deprecated-call
-                reason: "(test) query is excluded because it produces too many false positives in our codebase"
             - exclude:
                 id: java/error-message-exposure
-                reason: "(test) query is excluded because it produces too many false positives in our codebase"
 
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above
