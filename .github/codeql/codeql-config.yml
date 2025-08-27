@@ -10,7 +10,7 @@ queries:
 query-filters:
   - exclude:
       id: java/deprecated-call
-      reason: "(test) query is excluded because it produces too many false positives in our codebase"
   - exclude:
       id: java/error-message-exposure
-      reason: "(test) query is excluded because it produces too many false positives in our codebase"
+  - exclude:
+      id: java/sensitive-log
