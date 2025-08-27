@@ -84,20 +84,20 @@ jobs:
         # For more details on CodeQL's query packs, refer to: https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-code-scanning#using-queries-in-ql-packs
         # queries: security-extended,security-and-quality
         # -- use either config or config-file.yml; config takes precedence over config-file --
-        # config-file: .github/codeql/codeql-config.yml
-        config: |
-          queries:
-            - uses: security-and-quality
-            - name: go-custom-queries # custom queries
-              uses: advanced-security/ghas-bootcamp-march-2021-query/go/src@main
+        config-file: .github/codeql/codeql-config.yml
+        # config: |
+        #   queries:
+        #     - uses: security-and-quality
+        #     - name: go-custom-queries # custom queries
+        #       uses: advanced-security/ghas-bootcamp-march-2021-query/go/src@main
 
-          query-filters:
-            - exclude:
-              id: java/deprecated-call
-            - exclude:
-              id: java/error-message-exposure
-            - exclude:
-              id: java/sensitive-log
+        #   query-filters:
+        #     - exclude:
+        #       id: java/deprecated-call
+        #     - exclude:
+        #       id: java/error-message-exposure
+        #     - exclude:
+        #       id: java/sensitive-log
 
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above
