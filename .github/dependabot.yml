@@ -5,32 +5,6 @@
 
 version: 2
 updates:
-  - package-ecosystem: "pip"
-    directory: "/authn-service"
-    schedule:
-      interval: "daily"
-    labels:
-      - "triage-required"
-    assignees:
-      - "joshjohanning"
-    reviewers:
-      - "joshjohanning"
-    commit-message:
-      prefix: "pip"
-
-  - package-ecosystem: "npm"
-    directory: "/frontend"
-    schedule:
-      interval: "daily"
-    labels:
-      - "triage-required"
-    assignees:
-      - "joshjohanning"
-    reviewers:
-      - "joshjohanning"
-    commit-message:
-      prefix: "npm"
-
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
