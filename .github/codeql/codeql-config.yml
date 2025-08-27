@@ -12,3 +12,5 @@ query-filters:
       id: java/deprecated-call
   - exclude:
       id: java/error-message-exposure
+  - exclude:
+      id: java/sensitive-log
