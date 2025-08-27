@@ -6,3 +6,11 @@ queries:
   - name: go-custom-queries
     uses: advanced-security/ghas-bootcamp-march-2021-query/go/src@main
   - uses: security-and-quality
+
+query-filters:
+  - exclude:
+      id: java/deprecated-call
+      reason: "(test) query is excluded because it produces too many false positives in our codebase"
+  - exclude:
+      id: java/error-message-exposure
+      reason: "(test) query is excluded because it produces too many false positives in our codebase"
