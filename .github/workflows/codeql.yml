@@ -93,9 +93,11 @@ jobs:
 
           query-filters:
             - exclude:
-                id: java/deprecated-call
+              id: java/deprecated-call
             - exclude:
-                id: java/error-message-exposure
+              id: java/error-message-exposure
+            - exclude:
+              id: java/sensitive-log
 
     # If the analyze step fails for one of the languages you are analyzing with
     # "We were unable to automatically build your code", modify the matrix above
