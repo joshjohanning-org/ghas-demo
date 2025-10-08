@@ -14,7 +14,4 @@ jobs:
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@v4
         with:
-          fail-on-severity: low
-          # Use comma-separated names to pass list arguments:
-          deny-licenses: LGPL-2.0, BSD-2-Clause
-          comment-summary-in-pr: always
+          config-file: './.github/dependency-review-config.yml'
