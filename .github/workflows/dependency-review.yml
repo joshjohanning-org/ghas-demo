@@ -3,14 +3,15 @@ on: [pull_request]
 
 permissions:
   contents: read
+  pull-requests: write
 
 jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout Repository'
-        uses: actions/checkout@v3
+      - name: 'Checkout repository'
+        uses: actions/checkout@v5
       - name: 'Dependency Review'
-        uses: actions/dependency-review-action@v2
+        uses: actions/dependency-review-action@v4
         with:
-          fail-on-severity: low
+          config-file: './.github/dependency-review-config.yml'
