@@ -1,0 +1,6 @@
+fail-on-severity: 'high'
+allow-licenses:
+  - 'GPL-3.0'
+  - 'BSD-3-Clause'
+  - 'MIT'
+comment-summary-in-pr: 'on-failure'
