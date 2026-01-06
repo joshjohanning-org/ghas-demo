@@ -14,3 +14,11 @@ query-filters:
       id: java/error-message-exposure
   - exclude:
       id: java/sensitive-log
+
+paths-ignore:
+  - '**/*.test.js'
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/*Test.cs'
+  - '**/*Tests.cs'
+  
