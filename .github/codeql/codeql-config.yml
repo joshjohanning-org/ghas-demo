@@ -6,3 +6,19 @@ queries:
   - name: go-custom-queries
     uses: advanced-security/ghas-bootcamp-march-2021-query/go/src@main
   - uses: security-and-quality
+
+query-filters:
+  - exclude:
+      id: java/deprecated-call
+  - exclude:
+      id: java/error-message-exposure
+  - exclude:
+      id: java/sensitive-log
+
+paths-ignore:
+  - '**/*.test.js'
+  - '**/test/**'
+  - '**/tests/**'
+  - '**/*Test.cs'
+  - '**/*Tests.cs'
+  
